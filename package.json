@@ -1,0 +1,29 @@
+{
+  "name": "require-call",
+  "version": "1.0.0",
+  "description": "A more simple way to find all require() calls",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/test.js",
+    "benchmark": "node test/benchmark.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jsenjoy/require-call.git"
+  },
+  "keywords": [
+    "require"
+  ],
+  "author": "Boom Lee <teabyii@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsenjoy/require-call/issues"
+  },
+  "homepage": "https://github.com/jsenjoy/require-call#readme",
+  "devDependencies": {
+    "benchmark": "^2.1.0",
+    "crequire": "^1.7.0",
+    "detective": "^4.3.1",
+    "mocha": "^2.5.3"
+  }
+}
