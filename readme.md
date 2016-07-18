@@ -2,6 +2,9 @@
 
 A more simple way to find all require() calls.
 
+[![npm version](https://badge.fury.io/js/require-call.svg)](https://badge.fury.io/js/require-call)
+[![Build Status](https://travis-ci.org/jsenjoy/require-call.svg?branch=master)](https://travis-ci.org/jsenjoy/require-call)
+
 ## Installation
 
 ```shell
@@ -12,7 +15,9 @@ npm install require-call
 
 ### API
 
-`parseDependencies(code: String, replace: Function = null)`
+```
+parseDependencies(code: String, replace: Function = null)
+```
 
 ### Example
 
@@ -81,3 +86,12 @@ detective: nested x 18,324 ops/sec ±3.06% (82 runs sampled)
 npm run test
 npm run benchmark
 ```
+
+## Thanks
+
+- [crequire](https://github.com/seajs/crequire)
+- [node-detective](https://github.com/substack/node-detective)
+
+## License
+
+MIT

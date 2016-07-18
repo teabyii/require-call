@@ -1,6 +1,6 @@
 {
   "name": "require-call",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A more simple way to find all require() calls",
   "main": "index.js",
   "scripts": {
