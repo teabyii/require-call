@@ -20,11 +20,6 @@ module.exports = function parseDependencies(str, replace) {
   let index = 0
   let peek = str.charAt(index)
 
-  // Move to next char to check
-  function nextChar() {
-    peek = str.charAt(++index)
-  }
-
   // Use Regexp to find all requires
   while(re = RE_REQUIRE.exec(str)) {
     map.push({
@@ -33,6 +28,14 @@ module.exports = function parseDependencies(str, replace) {
       start: re.index,
       end: re.index + re[0].length
     })
+  }
+
+  // Has require but no require() call
+  if (map.length === 0) {
+    return {
+      code: str,
+      resource: []
+    }
   }
 
   // To locale requires which will be filtered
@@ -82,9 +85,14 @@ module.exports = function parseDependencies(str, replace) {
   // { code: new String(), resource: [ deps ] }
   return result
 
+  // Move to next char to check
+  function nextChar() {
+    peek = str.charAt(++index)
+  }
+
   // Move cursor to skip the disabled requires
   function move() {
-    
+
     while(index > current.end) {
       current = map[++cursor]
 

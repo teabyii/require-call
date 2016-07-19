@@ -100,3 +100,13 @@ describe('nested', () => {
     assert(resource[2].path === 'c')
   })
 })
+
+describe('empty', () => {
+  const str = fs.readFileSync(__dirname + '/files/empty.js', 'utf8')
+  const result = resolve(str)
+  const resource = result.resource
+
+  it('counts', () => {
+    assert(resource.length === 0)
+  })
+})
